@@ -1,0 +1,84 @@
+@use "./navbar";
+@use "./movie";
+
+body {
+  background-color: var(--secondary-color);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  --primary-color: #393646;
+  --secondary-color: #4f4557;
+  --font-color: #f4eee0;
+  --support-color: #6d5d6e;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+  }
+}
+h2,
+p {
+  color: var(--font-color);
+}
+a {
+  all: unset;
+  color: var(--font-color);
+  cursor: pointer;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  border-radius: 1rem;
+  .card-title {
+    text-align: center;
+  }
+}
+
+img {
+  object-fit: cover;
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.movies-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+input[type="text"] {
+  appearance: none;
+  border: none;
+  outline: none;
+  border-bottom: 0.2em solid var(--support-color);
+  background: rgba(white, 0.2);
+  border-radius: 0.2em 0.2em 0 0;
+  padding: 0.4em;
+  color: var(--font-color);
+}
+
+button {
+  appearance: none;
+  border: 0.2em solid var(--support-color);
+  background: var(--support-color);
+  padding: 0.85em 1.5em;
+  color: var(--font-color);
+  border-radius: 2em;
+  transition: 1s;
+  cursor: pointer;
+  &:hover,
+  &:focus,
+  &:active {
+    background: var(--primary-color);
+    color: #fff;
+  }
+}

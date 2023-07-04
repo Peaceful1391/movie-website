@@ -1,0 +1,13 @@
+.movie {
+  .movie-description {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    gap: 1rem;
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  .movie-player {
+    margin: 4rem 0;
+  }
+}
